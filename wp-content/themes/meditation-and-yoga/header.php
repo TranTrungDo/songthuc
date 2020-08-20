@@ -28,7 +28,7 @@
 	<header id="header">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4 col-md-4">
+				<div class="col-lg-3 col-md-3">
 					<div class="contact-details">
 						<?php if( get_theme_mod('meditation_and_yoga_mail1') != ''){ ?>
 								<span class="col-org"><i class="far fa-envelope"></i><?php echo esc_html( get_theme_mod('meditation_and_yoga_mail1','') ); ?></span>
@@ -38,7 +38,7 @@
 						<?php } ?>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-4">
+				<div class="col-lg-6 col-md-6">
 					<div class="logo">
 				         <?php if ( has_custom_logo() ) : ?>
 					        <div class="site-logo"><?php the_custom_logo(); ?></div>
@@ -65,7 +65,7 @@
 					    <?php }?>
 				    </div>
 				</div>
-				<div class="col-lg-4 col-md-4">
+				<div class="col-lg-3 col-md-3">
 					<div class="search-box">
 						<?php get_search_form(); ?>
 					</div>
