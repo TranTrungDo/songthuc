@@ -137,8 +137,13 @@ strong {
 	display: -webkit-box;
 	display: flex;
 	flex-wrap: wrap;
-	margin-right: 100px;
-	margin-left: 100px;
+}
+
+@media screen and (min-width: 1200px) {
+	.row {
+		margin-right: 100px;
+		margin-left: 100px;
+	}
 }
 
 code,
@@ -875,12 +880,12 @@ ul.list_nav {
 }
 .logo p{
 	margin: 2px 0px 0px;
-    font-size: 13px;
+    font-size: 18px;
 }
 .logo p,
 .logo h1 a,
 .logo p.site-title a{
-    color: #fd9854;
+    color: #01154e;
 }
 .logo h1,
 .logo p.site-title {
