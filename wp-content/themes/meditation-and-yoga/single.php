@@ -43,7 +43,7 @@ get_header(); ?>
 				</div>			
 			<?php }else if($meditation_and_yoga_layout_option == 'Right Sidebar'){ ?>
 				<div class="row">
-					<div class="content_area col-lg-9 col-md-9">
+					<div class="content_area col-lg-8 col-md-8">
 						<section id="post_section">
 							<?php
 							/* Start the Loop */

@@ -9,13 +9,13 @@
 
 get_header(); ?>
 
-<div class="container">
+<div class="container-fluid">
 	<?php if ( have_posts() ) : ?>
 		<header class="page-header">
-			<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="taxonomy-description">', '</div>' );
-			?>
+<!--			--><?php
+//				the_archive_title( '<h1 class="page-title">', '</h1>' );
+//				the_archive_description( '<div class="taxonomy-description">', '</div>' );
+//			?>
 		</header>
 	<?php endif; ?>
 
@@ -88,7 +88,7 @@ get_header(); ?>
 				            </div>
 						</section>
 					</div>
-					<div id="sidebar" class="col-lg-4 col-md-4"><?php dynamic_sidebar('sidebar-1'); ?>
+					<div id="sidebar" class="col-lg-3 col-md-3"><?php dynamic_sidebar('sidebar-1'); ?>
 					</div>
 				</div>
 			<?php }else if($meditation_and_yoga_layout_option == 'One Column'){ ?>

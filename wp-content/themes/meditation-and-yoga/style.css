@@ -909,7 +909,7 @@ ul.list_nav {
 }
 .article-text {
     padding: 10px;
-    background: #ececec;
+    background: #ffffff;
 }
 .article-text h4{
 	font-size: 22px;
@@ -1960,28 +1960,24 @@ h3.widget-title {
 	color: #fff;
 }
 #sidebar button.search-submit{
-	background-color: #fd9854;
-    background-image: none;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    margin-top: 12px;
-    width: 100%;
-    padding: 8px;
-    border:1px solid;
-    position: static;
+	background: url(assets/images/search.png) no-repeat scroll 7px;
+	text-indent: -9999px;
+	position: absolute;
+	right: 10px;
+	top: -3px;
 }
 #sidebar .search-form .search-submit {
 	bottom: 3px;
 }
 #sidebar input.search-field {
-  border: 1px solid;
-  color: #9b9b9b;
-  padding: 10px;
-  font-size: 15px;
-  width: 100%;	
-  border-radius: 0px;
-  margin-top:5px;
+    border: 1px solid;
+    color: #292b2c;
+    padding: 10px;
+    font-size: 15px;
+    width: 100%;
+    border-radius: 0px;
+    margin-top:5px;
+    background-color: #4ad44c;
 }
 #sidebar ul li a,
 #sidebar .widget_rss .rssSummary,
@@ -3310,7 +3306,7 @@ object {
 	#sidebar .search-form .search-submit{
 		bottom: 2px;
 	    padding: 15px;
-	    position: static;
+	    /*position: static;*/
 	    right: 1px;
 	}
 }

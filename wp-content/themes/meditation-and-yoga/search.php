@@ -9,11 +9,11 @@
 
 get_header(); ?>
 
-<div class="container">
+<div class="container-fluid">
 
 	<header class="page-header">
 		<?php if ( have_posts() ) : ?>
-			<h1 class="search-title"><?php /* translators: %s: search term */ printf( esc_html__( 'Search Results for: %s','meditation-and-yoga'), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
+			<h1 class="search-title"><?php /* translators: %s: search term */ printf( esc_html__( 'Kết quả tìm kiếm: %s','meditation-and-yoga'), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
 		<?php else : ?>
 			<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'meditation-and-yoga' ); ?></h1>
 		<?php endif; ?>
@@ -94,7 +94,7 @@ get_header(); ?>
 				            </div>
 						</section>
 					</div>
-					<div id="sidebar" class="col-lg-4 col-md-4"><?php dynamic_sidebar('sidebar-2'); ?>	
+					<div id="sidebar" class="col-lg-3 col-md-3"><?php dynamic_sidebar('sidebar-2'); ?>
 					</div>
 				</div>
 			<?php }else if($meditation_and_yoga_layout_option == 'One Column'){ ?>

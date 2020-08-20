@@ -7,7 +7,7 @@ get_header(); ?>
 
 <?php do_action( 'meditation_and_yoga_above_header_right_page' ); ?>
 
-<div class="container">
+<div class="container-fluid">
 	<div class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div class="row">

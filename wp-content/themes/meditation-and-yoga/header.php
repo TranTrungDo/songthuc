@@ -66,9 +66,9 @@
 				    </div>
 				</div>
 				<div class="col-lg-3 col-md-3">
-					<div class="search-box">
-						<?php get_search_form(); ?>
-					</div>
+<!--					<div class="search-box">-->
+<!--						--><?php //get_search_form(); ?>
+<!--					</div>-->
 				</div>
 			</div>
 		</div>
