@@ -146,6 +146,33 @@ strong {
 	}
 }
 
+div#carouselExampleIndicators {
+	margin: auto;
+	width: 50%;
+	padding-top: 20px;
+}
+
+h5 {
+	display: inline-block;
+	padding: 30px;
+	background: #ffffff28;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	padding-bottom: 50px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+h5 > p {
+	color: #fdeb04;
+}
+
+.p {
+	text-align: center;
+	padding-top: 40px;
+	font-size: 13px;
+}
+
 code,
 kbd,
 samp {

@@ -4,6 +4,11 @@ jQuery(document).ready(function ($) {
         $('#loader-wrapper').css('display', 'none');
     }
 
+    $('.carousel').carousel({
+        interval: 6000,
+        pause: "false"
+    });
+
     // Initialize gototop button
     if ($('#toTop').length > 0) {
         // Hide the toTop button when the page loads.

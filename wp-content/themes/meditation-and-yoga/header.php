@@ -112,5 +112,87 @@
 		</div>
 	</header>
 
+    <div class="row">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="http://songthuc.vn/wp-content/uploads/2020/08/hoa-dao-1.jpg" data-color="lightblue" alt="Lotus">
+                <div class="carousel-caption d-md-block">
+                    <h5><p>Tâm dẫn đầu các pháp</p>
+                        <p>Tâm là chủ, tạo tác</p>
+                        <p>Nếu nói hay hành động</p>
+                        <p>Với tâm niệm thanh tịnh</p>
+                        <p>An lạc liền theo sau</p>
+                        <p>Như bóng chẳng rời hình</p>
+                    </h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="http://songthuc.vn/wp-content/uploads/2020/08/peach-blossom-3268671_640.jpg" data-color="firebrick" alt="blossom">
+                <div class="carousel-caption d-md-block">
+                    <h5><p>Xuân đi trăm hoa rụng</p>
+                        <p>Xuân đến trăm hoa cười</p>
+                        <p>Trước mắt việc đi mãi</p>
+                        <p>Trên đầu, già đến rồi</p>
+                        <p>Chớ bảo xuân tàn hoa rụng hết</p>
+                        <p>Đêm qua, sân trước một nhành mai</p></h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="http://songthuc.vn/wp-content/uploads/2020/08/hoa-dao-1.jpg" data-color="green" alt="peach">
+                <div class="carousel-caption d-md-block">
+                    <h5><p>Dầu tụng ít kinh điển</p>
+                        <p>Nhưng làm theo chánh pháp</p>
+                        <p>Diệt trừ tham sân si</p>
+                        <p>Hiểu đúng, tâm giải thoát</p>
+                        <p>Không chấp cả hai đời</p>
+                        <p>An hưởng quả đạo hạnh</p></h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="http://songthuc.vn/wp-content/uploads/2020/08/peach-blossom-3268671_640.jpg" data-color="violet" alt="Lotus">
+                <div class="carousel-caption d-md-block">
+                    <h5><p>Tự mình làm điều ác</p>
+                        <p>Tự mình sanh nhiễm ô</p>
+                        <p>Tự mình không làm ác</p>
+                        <p>Tự mình thanh tịnh mình </p>
+                        <p>Tịnh hay không, do mình </p>
+                        <p>Không ai thanh tịnh ai</p>
+                        <p>Hãy tự cứu lấy mình</p>
+                    </h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="http://songthuc.vn/wp-content/uploads/2020/08/hoa-dao-1.jpg" data-color="pink" alt="peach">
+                <div class="carousel-caption d-md-block">
+                    <h5><p>Dầu tại bãi chiến trường</p>
+                        <p>Thắng hàng ngàn quân địch</p>
+                        <p>Không bằng tự thắng mình</p>
+                        <p>Thắng mình là tối thượng</p>
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    </div>
+
 	<div class="site-content-contain">
 		<div id="content" class="site-content">
