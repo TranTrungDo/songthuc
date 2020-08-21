@@ -931,7 +931,7 @@ ul.list_nav {
     margin-top: -30px;
     margin-bottom: 10px;
     color: #fff;
-    background: #039005;
+    background: #0486ad;
 }
 .article_content .metabox i,
 .article_content .metabox span,
@@ -1940,7 +1940,7 @@ h3.widget-title {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    background: #039005;
+    background: #0486ad;
     color: #fff;
     letter-spacing: 1px;
     border-bottom: 1px solid;
@@ -1977,7 +1977,7 @@ h3.widget-title {
     width: 100%;
     border-radius: 0px;
     margin-top:5px;
-    background-color: #4ad44c;
+    background-color: #a8e0f2;
 }
 #sidebar ul li a,
 #sidebar .widget_rss .rssSummary,
