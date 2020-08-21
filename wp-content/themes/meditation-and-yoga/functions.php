@@ -216,7 +216,7 @@ add_action( 'wp_enqueue_scripts', 'meditation_and_yoga_scripts' );
 function getPostViews($postID){
     $count_key = 'post_views_count';
     $count = get_post_meta($postID, $count_key, true);
-    if($count==''){
+    if($count == '') {
         delete_post_meta($postID, $count_key);
         add_post_meta($postID, $count_key, '0');
         return "0 View";
@@ -227,11 +227,11 @@ function getPostViews($postID){
 function setPostViews($postID) {
     $count_key = 'post_views_count';
     $count = get_post_meta($postID, $count_key, true);
-    if($count==''){
+    if($count ==' ') {
         $count = 0;
         delete_post_meta($postID, $count_key);
         add_post_meta($postID, $count_key, '0');
-    }else{
+    } else {
         $count++;
         update_post_meta($postID, $count_key, $count);
     }
@@ -250,6 +250,11 @@ function meditation_and_yoga_sanitize_dropdown_pages( $page_id, $setting ) {
   // If $page_id is an ID of a published page, return it; otherwise, return the default.
   return ( 'publish' == get_post_status( $page_id ) ? $page_id : $setting->default );
 }
+
+function customize_excerpt_length($length){
+    return 100;
+}
+add_filter('excerpt_length', 'customize_excerpt_length');
 
 function meditation_and_yoga_sanitize_choices( $input, $setting ) {
     global $wp_customize; 

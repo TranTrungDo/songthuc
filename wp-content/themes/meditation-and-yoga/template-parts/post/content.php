@@ -15,11 +15,11 @@
       <span class="entry-comments"><i class="fas fa-comments"></i><?php comments_number( __('0 Comments','meditation-and-yoga'), __('0 Comments','meditation-and-yoga'), __('% Comments','meditation-and-yoga') ); ?></span>
       <span class="entry-author"><i class="fas fa-eye"></i><?php echo esc_html(getPostViews(get_the_ID())); ?></span>
     </div>
-    <?php if(has_post_thumbnail()) { ?>
-      <?php the_post_thumbnail(); ?>  
-    <?php }?>
     <div class="<?php if(has_post_thumbnail()) { ?>"<?php } else { ?>"<?php } ?>">
       <a href="<?php esc_url(the_permalink()); ?> "><h3><?php esc_html(the_title()); ?></h3></a>
+      <?php if(has_post_thumbnail()) { ?>
+          <?php the_post_thumbnail([400, 600], array( 'align' => "left" , "style" => "margin-right: 30px;margin-bottom: 10px;")); ?>
+      <?php }?>
       <p><?php the_excerpt(); ?></p>
       <div class="read-btn">
         <a href="<?php esc_url(the_permalink()); ?>" class="" title="<?php esc_attr_e( 'Đọc tiếp', 'meditation-and-yoga' ); ?>"><?php esc_html_e('Đọc tiếp','meditation-and-yoga'); ?>
