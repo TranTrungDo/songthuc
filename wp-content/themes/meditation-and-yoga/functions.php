@@ -251,10 +251,29 @@ function meditation_and_yoga_sanitize_dropdown_pages( $page_id, $setting ) {
   return ( 'publish' == get_post_status( $page_id ) ? $page_id : $setting->default );
 }
 
-function customize_excerpt_length($length){
-    return 100;
+remove_filter ('the_content', 'wpautop');
+
+function clear_br($content) {
+    return str_replace("<br/>","<br clear='none'/>", $content);
 }
-add_filter('excerpt_length', 'customize_excerpt_length');
+add_filter('the_content', 'clear_br');
+
+//function customize_excerpt_length($length){
+//    return 100;
+//}
+//add_filter('excerpt_length', 'customize_excerpt_length');
+
+//function custom_read_more() {
+//    return '&hellip; <a style="color:#07b8ee" href="' . get_the_permalink() . '">Đọc tiếp »</a>';
+//}
+
+//function excerpt($limit = 50) {
+//    return wp_trim_words(get_the_excerpt(), $limit, custom_read_more());
+//}
+
+function excerpt($limit = 50) {
+    return wp_trim_words(get_the_excerpt(), $limit);
+}
 
 function meditation_and_yoga_sanitize_choices( $input, $setting ) {
     global $wp_customize; 

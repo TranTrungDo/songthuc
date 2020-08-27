@@ -4,9 +4,31 @@ jQuery(document).ready(function ($) {
         $('#loader-wrapper').css('display', 'none');
     }
 
-    $('.carousel').carousel({
+    $('.custom-carousel-interval').carousel({
         interval: 6000,
         pause: "false"
+    });
+
+    $('#outerCarousel').carousel({
+        pause: true,
+        interval: false
+    });
+
+    $('.fdi-Carousel .carousel-item').each(function () {
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        //this will only work for carousel with 3 items since it only adds next() and  next.next();
+
+        if (next.next().length > 0) {
+            next.next().children(':first-child').clone().appendTo($(this));
+        }
+        else {
+            $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+        }
     });
 
     // Initialize gototop button
