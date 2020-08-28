@@ -125,146 +125,150 @@
         </div>
     </header>
 
-    <div id="carouselExampleIndicators" class="carousel slide custom-carousel-interval" data-ride="carousel">
-        <?php
-        $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-        $quote_songthuc_file = $DOCUMENT_ROOT . '/wp-content/themes/meditation-and-yoga/assets/quote_songthuc';
-        $content_quote_songthuc = array();
-        $quote_songthuc_fp = fopen($quote_songthuc_file, 'r');
-        if ($quote_songthuc_fp) {
-            $content_quote_songthuc = explode("\n", fread($quote_songthuc_fp, filesize($quote_songthuc_file)));
-        }
-        fclose($quote_songthuc_fp);
-        $image_slideshow = [
-            "http://songthuc.vn/wp-content/uploads/2020/08/thumb_697_news_standard.jpeg",
-            "http://songthuc.vn/wp-content/uploads/2020/08/banner_2.jpg",
-            "http://songthuc.vn/wp-content/uploads/2020/08/key.jpg",
-            "http://songthuc.vn/wp-content/uploads/2020/08/3_1560262312.jpg",
-            "http://songthuc.vn/wp-content/uploads/2020/08/hinh-nen-4k-dep-9_124944.jpg",
-            "http://songthuc.vn/wp-content/uploads/2020/08/cropped-hope-seedling-2-scaled-1.jpg",
-            "http://songthuc.vn/wp-content/uploads/2020/08/boris-smokrovic-220975-1200x450-1.jpg",
-            "http://songthuc.vn/wp-content/uploads/2020/08/borobudur_sunrise-e1368799522312.jpg",
-            "http://songthuc.vn/wp-content/uploads/2020/08/agrii.jpg",
-            "http://songthuc.vn/wp-content/uploads/2020/08/fonds-was-sie-ueber-anlagefonds-wissen-muessen.jpg",
-            "http://songthuc.vn/wp-content/uploads/2020/08/shutterstock_1087622744-1200x450-1.jpg",
-            "http://songthuc.vn/wp-content/uploads/2020/08/fullscreen-01-aron-visuals-bxoxnq26b7o-unsplash.jpg",
-            "http://songthuc.vn/wp-content/uploads/2020/08/juliana-vs-usa-1200x450-131788107198076190.jpg",
-            "http://songthuc.vn/wp-content/uploads/2020/08/green_living-lightbulb.jpg",
-            "http://songthuc.vn/wp-content/uploads/2020/08/bamboo.jpg"
-        ]
-        ?>
-        <div class="carousel-inner" role="listbox">
-            <?php
-            $image_slideshow_idx = 0;
-            for ($i = 0; $i < count($content_quote_songthuc) - 1; $i += 3) {
-                ?>
-                <?php if ($i == 0) { ?>
-                    <div class="carousel-item active">
-                        <img class="d-block w-100"
-                             src=<?php echo $image_slideshow[$image_slideshow_idx] ?> data-color="lightblue"
-                             alt="songthuc">
-                        <div class="carousel-caption">
-                            <div><?php echo $content_quote_songthuc[0] ?></div>
-                            <div style="color:#fcd000; font-size:14px; font-weight: bold; font-style:italic"><?php echo $content_quote_songthuc[1] ?></div>
-                        </div>
-                    </div>
-                <?php } else if ($i > 1) { ?>
-                    <div class="carousel-item">
-                        <img class="d-block w-100"
-                             src=<?php echo $image_slideshow[$image_slideshow_idx] ?> data-color="lightblue"
-                             alt="songthuc">
-                        <div class="carousel-caption">
-                            <div><?php echo $content_quote_songthuc[$i] ?></div>
-                            <div style="color:#fcd000; font-size:14px; font-weight: bold; font-style:italic"><?php echo $content_quote_songthuc[$i + 1] ?></div>
-                        </div>
-                    </div>
-                <?php } ?>
-                <?php
-                $image_slideshow_idx += 1;
-                if ($image_slideshow_idx == count($image_slideshow)) {
-                    $image_slideshow_idx = 0;
-                }
-            } ?>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-
-    <div class="container my-4">
-        <div class="tt-ss"></div>
+    <div class="container-fluid">
         <div class="slideshow">
-            <div class="slideshow">
-                <div id="outerCarousel" class="carousel slide fdi-Carousel" data-ride="carousel">
+            <div class="col-xs-12 .d-none">
+                <div id="carouselExampleIndicators" class="carousel slide custom-carousel-interval"
+                     data-ride="carousel">
+                    <?php
+                    $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+                    $quote_songthuc_file = $DOCUMENT_ROOT . '/wp-content/themes/meditation-and-yoga/assets/quote_songthuc';
+                    $content_quote_songthuc = array();
+                    $quote_songthuc_fp = fopen($quote_songthuc_file, 'r');
+                    if ($quote_songthuc_fp) {
+                        $content_quote_songthuc = explode("\n", fread($quote_songthuc_fp, filesize($quote_songthuc_file)));
+                    }
+                    fclose($quote_songthuc_fp);
+                    $image_slideshow = [
+                        "http://songthuc.vn/wp-content/uploads/2020/08/thumb_697_news_standard.jpeg",
+                        "http://songthuc.vn/wp-content/uploads/2020/08/banner_2.jpg",
+                        "http://songthuc.vn/wp-content/uploads/2020/08/key.jpg",
+                        "http://songthuc.vn/wp-content/uploads/2020/08/3_1560262312.jpg",
+                        "http://songthuc.vn/wp-content/uploads/2020/08/hinh-nen-4k-dep-9_124944.jpg",
+                        "http://songthuc.vn/wp-content/uploads/2020/08/cropped-hope-seedling-2-scaled-1.jpg",
+                        "http://songthuc.vn/wp-content/uploads/2020/08/boris-smokrovic-220975-1200x450-1.jpg",
+                        "http://songthuc.vn/wp-content/uploads/2020/08/borobudur_sunrise-e1368799522312.jpg",
+                        "http://songthuc.vn/wp-content/uploads/2020/08/agrii.jpg",
+                        "http://songthuc.vn/wp-content/uploads/2020/08/fonds-was-sie-ueber-anlagefonds-wissen-muessen.jpg",
+                        "http://songthuc.vn/wp-content/uploads/2020/08/shutterstock_1087622744-1200x450-1.jpg",
+                        "http://songthuc.vn/wp-content/uploads/2020/08/fullscreen-01-aron-visuals-bxoxnq26b7o-unsplash.jpg",
+                        "http://songthuc.vn/wp-content/uploads/2020/08/juliana-vs-usa-1200x450-131788107198076190.jpg",
+                        "http://songthuc.vn/wp-content/uploads/2020/08/green_living-lightbulb.jpg",
+                        "http://songthuc.vn/wp-content/uploads/2020/08/bamboo.jpg"
+                    ]
+                    ?>
                     <div class="carousel-inner" role="listbox">
                         <?php
-                        $stickies = get_option('sticky_posts');
-                        if ($stickies) {
-                            $args = [
-                                'post_type' => 'post',
-                                'post__in' => $stickies,
-                                'posts_per_page' => -1,
-                                'ignore_sticky_posts' => 1
-                            ];
-                            $the_query = new WP_Query($args);
-                            if ($the_query->have_posts()) {
-                                $post_active = true;
-                                while ($the_query->have_posts()) {
-                                    $stk_posts = $the_query->the_post();
-                                    if (has_post_thumbnail()) {
-
-                                        ?>
-                                        <?php
-                                        if (get_the_title() == "LỜI TỰA") {
-                                            ?>
-                                            <div class="carousel-item active">
-                                                <div class="col-md-4 clearfix text-center">
-                                                    <a href="<?php esc_url(the_permalink()); ?>"><?php the_post_thumbnail([400, 600]) ?></a>
-                                                    <div class="card-body">
-                                                        <a href="<?php esc_url(the_permalink()); ?> "><h4
-                                                                    class="card-title"><?php esc_html(the_title()); ?></h4>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <?php
-                                        } else {
-                                            ?>
-                                            <div class="carousel-item">
-                                                <div class="col-md-4 clearfix text-center">
-                                                    <a href="<?php esc_url(the_permalink()); ?> "><?php the_post_thumbnail([400, 600]) ?></a>
-                                                    <div class="card-body">
-                                                        <a href="<?php esc_url(the_permalink()); ?> "><h4
-                                                                    class="card-title"><?php esc_html(the_title()); ?></h4>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <?php
-                                        }
-                                        ?>
-                                        <?php
-                                    }
-                                }
-                                wp_reset_postdata();
+                        $image_slideshow_idx = 0;
+                        for ($i = 0; $i < count($content_quote_songthuc) - 1; $i += 3) {
+                            ?>
+                            <?php if ($i == 0) { ?>
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100"
+                                         src=<?php echo $image_slideshow[$image_slideshow_idx] ?> data-color="lightblue"
+                                         alt="songthuc">
+                                    <div class="carousel-caption">
+                                        <div><?php echo $content_quote_songthuc[0] ?></div>
+                                        <div style="color:#fcd000; font-size:14px; font-weight: bold; font-style:italic"><?php echo $content_quote_songthuc[1] ?></div>
+                                    </div>
+                                </div>
+                            <?php } else if ($i > 1) { ?>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100"
+                                         src=<?php echo $image_slideshow[$image_slideshow_idx] ?> data-color="lightblue"
+                                         alt="songthuc">
+                                    <div class="carousel-caption">
+                                        <div><?php echo $content_quote_songthuc[$i] ?></div>
+                                        <div style="color:#fcd000; font-size:14px; font-weight: bold; font-style:italic"><?php echo $content_quote_songthuc[$i + 1] ?></div>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                            <?php
+                            $image_slideshow_idx += 1;
+                            if ($image_slideshow_idx == count($image_slideshow)) {
+                                $image_slideshow_idx = 0;
                             }
-                        }
-                        ?>
+                        } ?>
                     </div>
-                    <a class="carousel-control-prev" href="#outerCarousel" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next" href="#outerCarousel" role="button" data-slide="next">
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="tt-ss"></div>
+        <div class="row">
+            <div id="outerCarousel" class="carousel slide fdi-Carousel" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <?php
+                    $stickies = get_option('sticky_posts');
+                    if ($stickies) {
+                        $args = [
+                            'post_type' => 'post',
+                            'post__in' => $stickies,
+                            'posts_per_page' => -1,
+                            'ignore_sticky_posts' => 1
+                        ];
+                        $the_query = new WP_Query($args);
+                        if ($the_query->have_posts()) {
+                            $post_active = true;
+                            while ($the_query->have_posts()) {
+                                $stk_posts = $the_query->the_post();
+                                if (has_post_thumbnail()) {
+                                    ?>
+                                    <?php
+                                    if (get_the_title() == "LỜI TỰA") {
+                                        ?>
+                                        <div class="carousel-item active">
+                                            <div class="col-md-4 clearfix text-center">
+                                                <a href="<?php esc_url(the_permalink()); ?>"><?php the_post_thumbnail([400, 600]) ?></a>
+                                                <div class="card-body">
+                                                    <a href="<?php esc_url(the_permalink()); ?> "><h4
+                                                                class="card-title"><?php esc_html(the_title()); ?></h4>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php
+                                    } else {
+                                        ?>
+                                        <div class="carousel-item">
+                                            <div class="col-md-4 clearfix text-center">
+                                                <a href="<?php esc_url(the_permalink()); ?> "><?php the_post_thumbnail([400, 600]) ?></a>
+                                                <div class="card-body">
+                                                    <a href="<?php esc_url(the_permalink()); ?> "><h4
+                                                                class="card-title"><?php esc_html(the_title()); ?></h4>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php
+                                    }
+                                    ?>
+                                    <?php
+                                }
+                            }
+                            wp_reset_postdata();
+                        }
+                    }
+                    ?>
+                </div>
+                <a class="carousel-control-prev" href="#outerCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#outerCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
         <!--        <hr class="my-4">-->

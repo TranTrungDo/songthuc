@@ -235,6 +235,7 @@ div#carouselExampleIndicators {
 
 .card-title {
 	color: #a94442;
+	font-size: 1em;
 }
 
 .tt-primary {
@@ -252,6 +253,7 @@ div#carouselExampleIndicators {
 	position: relative;
 	text-transform: uppercase;
 	text-align: center;
+	padding: 20px;
 }
 
 .tt-ss:after {

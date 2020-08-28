@@ -4,6 +4,11 @@ jQuery(document).ready(function ($) {
         $('#loader-wrapper').css('display', 'none');
     }
 
+    if(window.matchMedia("(max-width: 767px)").matches){
+        $('.carousel-control-prev').css('display', 'none');
+        $('.carousel-control-next').css('display', 'none');
+    }
+
     $('.custom-carousel-interval').carousel({
         interval: 6000,
         pause: "false"
@@ -29,6 +34,22 @@ jQuery(document).ready(function ($) {
         else {
             $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
         }
+    });
+
+    $(".carousel").on("touchstart", function(event){
+        var xClick = event.originalEvent.touches[0].pageX;
+        $(this).one("touchmove", function(event){
+            var xMove = event.originalEvent.touches[0].pageX;
+            if( Math.floor(xClick - xMove) > 5 ){
+                $(this).carousel('next');
+            }
+            else if( Math.floor(xClick - xMove) < -5 ){
+                $(this).carousel('prev');
+            }
+        });
+        $(".carousel").on("touchend", function(){
+            $(this).off("touchmove");
+        });
     });
 
     // Initialize gototop button
