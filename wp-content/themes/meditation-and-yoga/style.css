@@ -139,12 +139,12 @@ strong {
 	flex-wrap: wrap;
 }
 
-@media screen and (min-width: 1200px) {
-	.row {
-		margin-right: 100px;
-		margin-left: 100px;
-	}
-}
+/*@media screen and (min-width: 1200px) {*/
+/*	.row {*/
+/*		margin-right: 100px;*/
+/*		margin-left: 100px;*/
+/*	}*/
+/*}*/
 
 @media screen and (min-width: 1200px) {
 	.slideshow {

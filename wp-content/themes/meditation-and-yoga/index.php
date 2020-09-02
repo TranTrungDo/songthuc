@@ -61,7 +61,10 @@ get_header(); ?>
                     </div>
                 <?php } else if ($meditation_and_yoga_layout_option == 'Right Sidebar') { ?>
                 <div class="row">
-                    <div id="" class="content_area col-lg-9 col-md-9">
+                    <div id="sidebar" class="col-lg-2 col-md-2">
+                        <!--                    --><?php //dynamic_sidebar('sidebar-1'); ?>
+                    </div>
+                    <div id="" class="content_area col-lg-8 col-md-8">
                         <section id="post_section">
                             <?php
                                 $wp_categories = get_categories();
@@ -125,7 +128,9 @@ get_header(); ?>
                     ?>
                     </section>
                 </div>
-                <div id="sidebar" class="col-lg-3 col-md-3"><?php dynamic_sidebar('sidebar-1'); ?></div>
+                <div id="sidebar" class="col-lg-2 col-md-2">
+<!--                    --><?php //dynamic_sidebar('sidebar-1'); ?>
+                </div>
         </div>
         <?php } else if ($meditation_and_yoga_layout_option == 'One Column') { ?>
         <div class="content_area">
