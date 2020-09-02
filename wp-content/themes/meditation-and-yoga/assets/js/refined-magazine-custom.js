@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
         $('#loader-wrapper').css('display', 'none');
     }
 
-    if(window.matchMedia("(max-width: 767px)").matches){
+    if(window.matchMedia("(max-width: 768px)").matches){
         $('.carousel-control-prev').css('display', 'none');
         $('.carousel-control-next').css('display', 'none');
     }

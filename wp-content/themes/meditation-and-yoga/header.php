@@ -125,12 +125,10 @@
         </div>
     </header>
 
-    <div class="container-fluid">
+    <div id="show-quote-desktop" class="container-fluid">
         <div class="slideshow">
-            <div class="col-xs-12 .d-none">
-                <div id="carouselExampleIndicators" class="carousel slide custom-carousel-interval"
-                     data-ride="carousel">
-                    <?php
+            <div id="carouselExampleIndicators" class="carousel slide custom-carousel-interval" data-ride="carousel">
+                <?php
                     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
                     $quote_songthuc_file = $DOCUMENT_ROOT . '/wp-content/themes/meditation-and-yoga/assets/quote_songthuc';
                     $content_quote_songthuc = array();
@@ -156,12 +154,11 @@
                         "http://songthuc.vn/wp-content/uploads/2020/08/green_living-lightbulb.jpg",
                         "http://songthuc.vn/wp-content/uploads/2020/08/bamboo.jpg"
                     ]
-                    ?>
-                    <div class="carousel-inner" role="listbox">
-                        <?php
+                ?>
+                <div class="carousel-inner" role="listbox">
+                    <?php
                         $image_slideshow_idx = 0;
-                        for ($i = 0; $i < count($content_quote_songthuc) - 1; $i += 3) {
-                            ?>
+                        for ($i = 0; $i < count($content_quote_songthuc) - 1; $i += 3) { ?>
                             <?php if ($i == 0) { ?>
                                 <div class="carousel-item active">
                                     <img class="d-block w-100"
@@ -189,17 +186,58 @@
                                 $image_slideshow_idx = 0;
                             }
                         } ?>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
+        </div>
+    </div>
+
+    <div id="show-quote-mobile" class="container">
+        <div id="carouselContent" class="carousel slide custom-carousel-interval" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <?php
+                    $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+                    $quote_songthuc_file = $DOCUMENT_ROOT . '/wp-content/themes/meditation-and-yoga/assets/quote_songthuc';
+                    $content_quote_songthuc = array();
+                    $quote_songthuc_fp = fopen($quote_songthuc_file, 'r');
+                    if ($quote_songthuc_fp) {
+                        $content_quote_songthuc = explode("\n", fread($quote_songthuc_fp, filesize($quote_songthuc_file)));
+                    }
+                    fclose($quote_songthuc_fp);
+                ?>
+
+                <?php
+                    for ($i = 0; $i < count($content_quote_songthuc) - 1; $i += 3) {
+                        if($i == 0) { ?>
+                            <div class="carousel-item text-center p-4 active">
+                                <p><?php echo $content_quote_songthuc[0] ?></p>
+                                <div style="color:#fcd000; font-size:14px; font-weight: bold; font-style:italic"><?php echo $content_quote_songthuc[1] ?></div>
+                            </div> <?php
+                        } else if ($i > 1) { ?>
+                            <div class="carousel-item text-center p-4">
+                                <p><?php echo $content_quote_songthuc[$i] ?></p>
+                                <div style="color:#fcd000; font-size:14px; font-weight: bold; font-style:italic"><?php echo $content_quote_songthuc[$i + 1] ?></div>
+                            </div>
+                            <?php
+                        }
+                    }
+                ?>
+            </div>
+            <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
 
