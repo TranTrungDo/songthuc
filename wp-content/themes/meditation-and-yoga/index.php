@@ -101,11 +101,11 @@ get_header(); ?>
                                         $q->the_post();
                                 ?>
                                 <div class="col-md-3 clearfix text-center">
-                                    <div class="<?php if (has_post_thumbnail()) { ?>"<?php } else { ?>"<?php } ?>">
+                                    <div class="article-item">
                                     <?php if (has_post_thumbnail()) { ?>
-                                        <a href="<?php esc_url(the_permalink()); ?>"><?php the_post_thumbnail([400, 600]); ?></a>
+                                        <div class="article-item__img"><a href="<?php esc_url(the_permalink()); ?>"><?php the_post_thumbnail([400, 600]); ?></a></div>
                                     <?php } ?>
-                                    <div class="card-body">
+                                    <div class="card-body article-item__title">
                                         <a href="<?php esc_url(the_permalink()); ?> "><h4 class="card-title"><?php esc_html(the_title()); ?></h4></a>
                                     </div>
                                     <p><?php echo excerpt(30) ?></p>
