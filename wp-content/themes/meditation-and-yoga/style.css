@@ -1139,29 +1139,60 @@ ul.list_nav {
     top: 5px;
 }
 #header input[type="search"]{
-	background: #84c184;
+	background: #eee;
 	border-radius: 20px;
-	border-color: #a94442;
+	border-color: #767676;
 	padding: 5px;
-    width: 75%;
+    width: 100%;
     float: right;
-    color: #650705;
+    color: #292b2c;
 }
 #header .search-box {
-    margin-top: 18px;
+	margin-left: auto;
+	margin-right: 0;
 }
 #header .search-box input[type="search"]::placeholder{
-	color:#fff;
+	color: #212124;
 	font-style: italic;
 	padding-left: 15px;
 	font-size: 12px; 
 }
 
 #header {
-	background: #fd9854;
-	padding-bottom: 30px;
-	background-image: url(http://songthuc.vn/wp-content/uploads/2020/08/lotus_10.jpg);
-	background-position: center bottom;
+	background: #fff;
+	padding-top: 30px;
+	z-index: 5;
+	position: relative;
+}
+
+.lm-container {
+	width: 100%;
+	max-width: 1210px;
+	padding: 0 20px;
+	margin: 0 auto;
+	clear: both;
+	position: relative;
+	display: flex;
+}
+
+.header__logo {
+	margin-bottom: 10px;
+	-moz-transform: translate(20px,0);
+	-o-transform: translate(20px,0);
+	-ms-transform: translate(20px,0);
+	-webkit-transform: translate(20px,0);
+	transform: translate(20px,0);
+}
+
+.date-format {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+	.date-format {
+		display: none;
+	}
 }
 
 /* logo and contact*/

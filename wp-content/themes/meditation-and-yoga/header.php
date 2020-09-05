@@ -30,54 +30,31 @@
        href="#content"><?php esc_html_e('Skip to content', 'meditation-and-yoga'); ?></a>
 
     <header id="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3">
-                    <div class="contact-details">
-                        <?php if (get_theme_mod('meditation_and_yoga_mail1') != '') { ?>
-                            <span class="col-org"><i
-                                        class="far fa-envelope"></i><?php echo esc_html(get_theme_mod('meditation_and_yoga_mail1', '')); ?></span>
-                        <?php } ?>
-                        <?php if (get_theme_mod('meditation_and_yoga_call1') != '') { ?>
-                            <span class="col-org"><i
-                                        class="fas fa-phone"></i><?php echo esc_html(get_theme_mod('meditation_and_yoga_call1', '')); ?></span>
-                        <?php } ?>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="logo">
-                        <?php if (has_custom_logo()) : ?>
-                            <div class="site-logo"><?php the_custom_logo(); ?></div>
-                        <?php endif; ?>
-                        <?php if (get_theme_mod('meditation_and_yoga_show_site_title', true)) { ?>
-                            <?php $blog_info = get_bloginfo('name'); ?>
-                            <?php if (!empty($blog_info)) : ?>
-                                <?php if (is_front_page() && is_home()) : ?>
-                                    <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"
-                                                              rel="home"><?php bloginfo('name'); ?></a></h1>
-                                <?php else : ?>
-                                    <p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"
-                                                             rel="home"><?php bloginfo('name'); ?></a></p>
-                                <?php endif; ?>
-                            <?php endif; ?>
-                        <?php } ?>
-                        <?php if (get_theme_mod('meditation_and_yoga_show_tagline', true)) { ?>
-                            <?php
-                            $description = get_bloginfo('description', 'display');
-                            if ($description || is_customize_preview()) :
-                                ?>
-                                <p class="site-description">
-                                    <?php echo esc_html($description); ?>
-                                </p>
-                            <?php endif; ?>
-                        <?php } ?>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3">
-                    <!--					<div class="search-box">-->
-                    <!--						--><?php //get_search_form(); ?>
-                    <!--					</div>-->
-                </div>
+        <div class="container lm-container">
+            <div class="header__logo">
+                <a href="http://songthuc.vn/">
+                    <img src="http://songthuc.vn/wp-content/uploads/2020/09/temp_logo_songthuc.png" alt="Sống Thực">
+                </a>
+            </div>
+<!--            <div class="search-box">-->
+<!--                --><?php //get_search_form(); ?>
+<!--            </div>-->
+            <?php
+                date_default_timezone_set("Asia/Ho_Chi_Minh");
+                $current_date = date("d/m/Y");
+                $current_day_week = date("l");
+                $convert_day_en_2_vi = [
+                    "Monday" => "Thứ hai",
+                    "Tuesday" => "Thứ ba",
+                    "Wednesday" => "Thứ tư",
+                    "Thursday" => "Thứ năm",
+                    "Friday" => "Thứ sáu",
+                    "Saturday" => "Thứ bảy",
+                    "Sunday" => "Chủ nhật"
+                ];
+            ?>
+            <div class="date-format">
+                <?php echo $convert_day_en_2_vi[$current_day_week] . ", " . $current_date ?>
             </div>
         </div>
         <div class="menu-section">
