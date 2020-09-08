@@ -826,17 +826,10 @@ if( !function_exists('newsreaders_footer_content_info') ):
                     </div>
                     <div class="nr-copyright-text">
                         <?php
-//                        $ed_footer_copyright = wp_kses_post( get_theme_mod( 'ed_footer_copyright', $newsreaders_default['ed_footer_copyright'] ) );
                         $footer_copyright_text = wp_kses_post( get_theme_mod( 'footer_copyright_text', $newsreaders_default['footer_copyright_text'] ) );
 //                        echo esc_html__('Copyright ', 'newsreaders') . '&copy; ' . absint(date('Y')) . ' <a href="' . esc_url(home_url('/')) . '" title="' . esc_attr(get_bloginfo('name', 'display')) . '" ><span>' . esc_html( get_bloginfo( 'name', 'display' ) ) . '. </span></a> ' . esc_html( $footer_copyright_text );
                         echo esc_html__('Bản quyền thuộc về ', 'songthuc') . ' <a href="' . esc_url(home_url('/')) . '" title="' . esc_attr(get_bloginfo('name', 'display')) . '" ><span>' . esc_html( get_bloginfo( 'name', 'display' ) ) . '. </span></a> ' . esc_html( $footer_copyright_text );
                         echo esc_html__('Email liên hệ: banquantri@songthuc.vn');
-
-//                        if( $ed_footer_copyright ){
-//                            echo '<br>';
-//                            echo esc_html__('Theme: ', 'newsreaders') . 'Newsreaders ' . esc_html__('By ', 'newsreaders') . '<a href="' . esc_url('https://www.themeinwp.com/theme/newsreaders') . '"  title="' . esc_attr__('Themeinwp', 'newsreaders') . '" target="_blank" rel="author"><span>' . esc_html__('Themeinwp. ', 'newsreaders') . '</span></a>';
-//                            echo esc_html__('Powered by ', 'newsreaders') . '<a href="' . esc_url('https://wordpress.org') . '" title="' . esc_attr__('WordPress', 'newsreaders') . '" target="_blank"><span>' . esc_html__('WordPress.', 'newsreaders') . '</span></a>';
-//                        }
                         ?>
                     </div>
                     <?php if (has_nav_menu('na-social-menu')) { ?>

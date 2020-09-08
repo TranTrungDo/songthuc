@@ -3503,6 +3503,7 @@ a.nr-btn-primary-bg:hover,
 .nr-meta-tag {
   font-size: 14px;
   font-weight: 500;
+  margin-bottom: 15px;
 }
 .nr-meta-tag.nr-meta-sm svg {
   height: 15px;
@@ -5459,7 +5460,7 @@ body.nr-multicolor-category .nr-category-with-bg a:nth-child(8):hover, body.nr-m
 }
 
 .nr-navigation-section {
-  background-color: #010101;
+  background-color: #0d9eca;
   position: relative;
   margin-bottom: 8px;
   display: none;

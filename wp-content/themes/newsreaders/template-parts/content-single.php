@@ -50,26 +50,26 @@ if( $newsreaders_header_trending_page != get_the_ID() && $newsreaders_header_pop
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> 
 
-		<?php if( has_post_thumbnail() ){
-			
-			if( is_single() ){
-
-				if( empty( $newsreaders_ed_feature_image ) && $newsreaders_post_layout != 'layout-2' ){
-					?><div class="post-thumbnail"><?php
-					newsreaders_post_thumbnail();
-					?>
-				</div><?php
-				}
-
-			}else{ ?>	
-
-				<div class="post-thumbnail">
-					<?php newsreaders_post_thumbnail(); ?>
-				</div>
-			
-			<?php
-			}
-		}
+<!--		--><?php //if( has_post_thumbnail() ){
+//
+//			if( is_single() ){
+//
+//				if( empty( $newsreaders_ed_feature_image ) && $newsreaders_post_layout != 'layout-2' ){
+//					?><!--<div class="post-thumbnail">--><?php
+//					newsreaders_post_thumbnail();
+//					?>
+<!--				</div>--><?php
+//				}
+//
+//			}else{ ?><!--	-->
+<!---->
+<!--				<div class="post-thumbnail">-->
+<!--					--><?php //newsreaders_post_thumbnail(); ?>
+<!--				</div>-->
+<!--			-->
+<!--			--><?php
+//			}
+//		}
 
 		if ( is_singular() && $newsreaders_post_layout != 'layout-2' ) { ?>
 
