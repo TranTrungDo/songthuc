@@ -340,6 +340,7 @@ require get_template_directory() . '/assets/lib/custom/css/style.php';
 /**
  * Block 1 Home Section.
  */
+require get_template_directory() . '/template-parts/components/sections/quotes-slideshow.php';
 require get_template_directory() . '/template-parts/components/sections/block-1.php';
 require get_template_directory() . '/template-parts/components/sections/block-2.php';
 require get_template_directory() . '/template-parts/components/sections/block-3.php';

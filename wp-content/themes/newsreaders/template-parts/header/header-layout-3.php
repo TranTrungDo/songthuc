@@ -45,10 +45,20 @@ $newsreaders_default = newsreaders_get_default_theme_options();
                 </div><!-- .site-branding -->
                 
                 <?php
-                $ed_header_date = get_theme_mod( 'ed_header_date', $newsreaders_default['ed_header_date'] );
-                if( $ed_header_date ){ ?>
-                    <div class="nr-date-time nr-secondary-font"><?php echo esc_html( current_time("j F Y, l") ); ?></div>
-                <?php } ?>
+                date_default_timezone_set("Asia/Ho_Chi_Minh");
+                $current_date = date("d/m/Y");
+                $current_day_week = date("l");
+                $convert_day_en_2_vi = [
+                    "Monday" => "Thứ hai",
+                    "Tuesday" => "Thứ ba",
+                    "Wednesday" => "Thứ tư",
+                    "Thursday" => "Thứ năm",
+                    "Friday" => "Thứ sáu",
+                    "Saturday" => "Thứ bảy",
+                    "Sunday" => "Chủ nhật"
+                ];
+                ?>
+                <div class="nr-date-time nr-secondary-font"><?php echo esc_html( $convert_day_en_2_vi[$current_day_week] . ", " . $current_date ); ?></div>
                 
             </div>
 

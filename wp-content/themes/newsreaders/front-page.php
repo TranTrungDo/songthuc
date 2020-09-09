@@ -3,7 +3,7 @@
  * @package Newsreaders
  */
 get_header();
-	
+
 	$newsreaders_default = newsreaders_get_default_theme_options();
 	$home_section_reorder_value = get_theme_mod( 'home_section_reorder_value', $newsreaders_default['home_section_reorder_value'] );
 	$home_section_reorder_value = explode(",",$home_section_reorder_value );
@@ -13,8 +13,9 @@ get_header();
 		$paged_active = true;
 	}
 
-	foreach( $home_section_reorder_value as $home_section_reorder ){
+    quotes_slideshow();
 
+	foreach( $home_section_reorder_value as $home_section_reorder ){
 
 		switch( $home_section_reorder ){
 

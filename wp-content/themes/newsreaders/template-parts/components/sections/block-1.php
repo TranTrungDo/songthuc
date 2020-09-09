@@ -94,7 +94,7 @@ if( !function_exists('newsreaders_block_1_section') ):
 			                    		if( empty( $featured_image[0] ) ){ $featured_image[0] = $fallback_images; } ?>
 
 			                    		<div class="nr-post nr-with-bg">
-											<div class="nr-image-section nr-image-with-content  nr-image-360  nr-overlay nr-image-hover-effect" >
+											<div class="nr-image-section nr-image-with-content nr-image-450 nr-overlay nr-image-hover-effect" >
 												<a href="<?php the_permalink(); ?>"></a>
 
 												<div class="nr-image bg-image" style="background-image:url('<?php echo esc_url( $featured_image[0] ); ?>')">
