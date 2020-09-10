@@ -18,7 +18,6 @@ $newsreaders_default = newsreaders_get_default_theme_options();
     <div class="header-navbar nr-header-layout-3 <?php echo $header_class; ?>" style="background-image:url('<?php echo esc_url(get_header_image()); ?>')">
         <div class="wrapper">
             <div class="navbar-item navbar-item-left">
-               
                <div class="site-branding">
                     <?php
                     the_custom_logo();

@@ -2615,6 +2615,10 @@ body.hide-comment-rating .tpk-star-rating {
   height: 130px;
 }
 
+.nr-image-150 {
+  height: 150px;
+}
+
 .nr-image-200 {
   height: 250px;
 }
@@ -3858,7 +3862,7 @@ body.nr-multicolor-category .nr-category-with-bg a:nth-child(8):hover, body.nr-m
   max-width: calc(100% - 50px);
 }
 .nr-post-with-number.nr-post-sm {
-  align-items: flex-start;
+  align-items: center;
 }
 .nr-post-with-number.nr-post-sm .nr-num {
   flex: 0 0 30px;
