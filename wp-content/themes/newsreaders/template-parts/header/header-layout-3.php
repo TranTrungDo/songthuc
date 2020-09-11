@@ -17,6 +17,11 @@ $newsreaders_default = newsreaders_get_default_theme_options();
     ?>
     <div class="header-navbar nr-header-layout-3 <?php echo $header_class; ?>" style="background-image:url('<?php echo esc_url(get_header_image()); ?>')">
         <div class="wrapper">
+            <div class="logo-songthuc">
+                <a href="<?php echo esc_url(home_url('/')); ?>">
+                    <img src="http://songthuc.vn/wp-content/uploads/2020/09/songthuc_logo.png" alt="songthuc" width="100" height="100">
+                </a>
+            </div>
             <div class="navbar-item navbar-item-left">
                <div class="site-branding">
                     <?php
@@ -115,14 +120,29 @@ $newsreaders_default = newsreaders_get_default_theme_options();
     <div id="navigation" class="nr-navigation-section header-navigation-wrapper <?php if( $ed_header_responsive_menu ) { echo 'na-responsive-menu'; } ?>">
         <div class="wrapper">
             <nav id="site-navigation" class="main-navigation">
-                <?php
-                if( !$ed_header_responsive_menu ){
-                    wp_nav_menu(array(
-                        'theme_location' => 'na-primary-menu',
-                        'container' => 'div',
-                        'container_class' => 'navigation-area'
-                    ));
-                } ?>
+                <div class="menu">
+                    <ul>
+                        <li class="page_item page-item-9999">
+                            <a href="<?php echo esc_url(home_url('/')); ?>">
+                                <i class="fa fa-home"></i>
+                            </a>
+                        </li>
+                        <?php
+                        if (has_nav_menu('primary')) :
+                            wp_nav_menu(array(
+                                'theme_location' => 'na-primary-menu',
+                                'container_class' => 'navigation-area',
+                                'menu_class' => 'clearfix',
+                                'items_wrap' => '%3$s',
+                                'container' => false,
+                                'fallback_cb' => 'wp_page_menu',
+                            ));
+                        else:
+                            wp_list_pages(array('depth' => 0, 'title_li' => ''));
+                        endif; // has_nav_menu
+                        ?>
+                    </ul>
+                </div>
             </nav><!-- #site-navigation -->
         </div>
         <div class="nr-progress-bar" id="progressbar">

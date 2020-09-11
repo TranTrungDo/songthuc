@@ -2577,7 +2577,17 @@ body.hide-comment-rating .tpk-star-rating {
 
 .section-border,
 .nr-section-border {
-  border-top: 1px solid rgba(215, 209, 209, 0.38);
+  /*border-top: 1px solid rgba(215, 209, 209, 0.38);*/
+}
+
+.nr-section-border:after {
+  content: '';
+  display: block;
+  width: 300px;
+  height: 100px;
+  margin: auto auto 20px;
+  background: url(assets/images/boundary.png) no-repeat center bottom;
+  background-size: 100% auto;
 }
 
 .bg-image {
@@ -5292,8 +5302,33 @@ body.nr-multicolor-category .nr-category-with-bg a:nth-child(8):hover, body.nr-m
   overflow: hidden;
 }
 
+/*---------------------------------------------------
+#   Go to Top
+*   ----------------------------------------------------- */
+#toTop {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 5px 15px;
+  color: #fd9854;
+  background-color: #0d19a3;
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+#toTop:hover {
+  opacity: 1;
+}
+
+.logo-songthuc {
+  display: table-cell;
+  position: relative;
+}
+
 .nr-header-layout-3 .navbar-item.navbar-item-left {
   justify-content: center;
+  display: table-cell;
 }
 @media (min-width: 768px) {
   .nr-header-layout-3 .navbar-item.navbar-item-left {
@@ -5304,6 +5339,7 @@ body.nr-multicolor-category .nr-category-with-bg a:nth-child(8):hover, body.nr-m
   flex: 0 0 100%;
   max-width: 100%;
   justify-content: center;
+  display: table-cell;
 }
 @media (min-width: 1050px) {
   .nr-header-layout-3 .navbar-item.navbar-item-right {
@@ -5414,7 +5450,7 @@ body.nr-multicolor-category .nr-category-with-bg a:nth-child(8):hover, body.nr-m
   border-top-color: #FFA500;
 }
 .site-header-layout .wrapper {
-  display: flex;
+  display: table;
   flex-wrap: wrap;
   align-items: center;
   position: relative;
@@ -5693,7 +5729,7 @@ body.nr-multicolor-category .nr-category-with-bg a:nth-child(8):hover, body.nr-m
 }
 
 .nr-banner-section {
-  padding: 30px 0 60px;
+  padding: 30px 0 30px;
 }
 @media (min-width: 768px) {
   .nr-banner-section .nr-order-2 {
@@ -6158,9 +6194,9 @@ body.nr-multicolor-category .nr-category-with-bg a:nth-child(8):hover, body.nr-m
 }
 
 body.home .archive-main-block {
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-color: rgba(215, 209, 209, 0.43);
+  /*border-top-width: 1px;*/
+  /*border-top-style: solid;*/
+  /*border-color: rgba(215, 209, 209, 0.43);*/
   padding: 30px 0 60px;
 }
 

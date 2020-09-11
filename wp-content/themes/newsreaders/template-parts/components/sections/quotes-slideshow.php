@@ -1,8 +1,8 @@
 <?php
 
-if (!function_exists('quotes_slideshow')):
+if (!function_exists('quotes_slideshow_section')):
 
-    function quotes_slideshow()
+    function quotes_slideshow_section()
     {
         $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
         $quote_songthuc_file = $DOCUMENT_ROOT . '/wp-content/themes/newsreaders/assets/quote_songthuc';

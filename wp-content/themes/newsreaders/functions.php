@@ -125,7 +125,7 @@ function newsreaders_register_styles() {
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
-	}	
+	}
 
 	wp_enqueue_script( 'imagesloaded' );
     wp_enqueue_script( 'masonry' );
@@ -135,6 +135,7 @@ function newsreaders_register_styles() {
 	wp_enqueue_script( 'newsreaders-pagination', get_template_directory_uri() . '/assets/lib/custom/js/pagination.js', array('jquery'), '', 1 );
 	wp_enqueue_script( 'newsreaders-custom', get_template_directory_uri() . '/assets/lib/custom/js/custom.js', array('jquery'), '', 1);
 	wp_enqueue_script( 'newsreaders-main', get_template_directory_uri() . '/assets/lib/custom/js/main.js', array('jquery'), '', 2);
+    wp_enqueue_script('songthuc-scrollup', get_template_directory_uri() . '/assets/lib/custom/js/scrollup.js', array('jquery'), '', true);
 
     $ajax_nonce = wp_create_nonce('newsreaders_ajax_nonce');
 
@@ -348,3 +349,4 @@ require get_template_directory() . '/template-parts/components/sections/block-4.
 require get_template_directory() . '/template-parts/components/sections/carousel.php';
 require get_template_directory() . '/template-parts/components/sections/latest-post.php';
 require get_template_directory() . '/template-parts/components/sections/breaking-news.php';
+require get_template_directory() . '/template-parts/components/sections/introduce-categories.php';

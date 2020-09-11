@@ -13,7 +13,7 @@ get_header();
 		$paged_active = true;
 	}
 
-    quotes_slideshow();
+    quotes_slideshow_section();
 
 	foreach( $home_section_reorder_value as $home_section_reorder ){
 
@@ -89,6 +89,8 @@ get_header();
 		}
 
 	}
+
+    introduce_categories_section();
 	
 	
 

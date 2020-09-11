@@ -13,16 +13,17 @@
     <head>
         <meta charset="<?php bloginfo('charset'); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+              content="Sống Thực - Nghệ thuật sống đơn giản và tỉnh thức với những nhiệm màu của cuộc sống">
+        <meta name="keywords" content="Sống Thực, songthuc, song thuc, sống thực, nghệ thuật sống">
         <link rel="profile" href="https://gmpg.org/xfn/11">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <?php wp_head(); ?>
     </head>
 
     <body <?php body_class('nr-multicolor-category'); ?>>
         <div id="preloader" class="preloader">
             <div id="loader" class="loader"></div>
-        </div>
-        <div class="scroll-top" id="scroll-top">
-            <span><i class="ion ion-ios-arrow-round-up"></i></span>
         </div>
 
         <?php

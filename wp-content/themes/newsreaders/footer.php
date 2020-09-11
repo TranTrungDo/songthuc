@@ -35,6 +35,9 @@ do_action('newsreaders_before_footer_content_action'); ?>
 
         do_action('newsreaders_footer_content_action'); ?>
 </footer>
+<a id="toTop" class="go-to-top" href="#" title="<?php esc_attr_e('Lên đầu trang', 'songthuc'); ?>">
+    <i class="fa fa-angle-double-up"></i>
+</a>
 <?php wp_footer(); ?>
 
 </body>
