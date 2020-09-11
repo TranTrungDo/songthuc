@@ -72,7 +72,7 @@ get_header();
 
 	        case 'home_section_latest_posts':
 
-				newsreaders_latest_posts_section();
+//				newsreaders_latest_posts_section();
 
 	        break;
 
