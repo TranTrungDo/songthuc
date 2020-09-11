@@ -122,7 +122,7 @@ $newsreaders_default = newsreaders_get_default_theme_options();
             <nav id="site-navigation" class="main-navigation">
                 <div class="menu">
                     <ul>
-                        <li class="page_item page-item-9999">
+                        <li class="page_item">
                             <a href="<?php echo esc_url(home_url('/')); ?>">
                                 <i class="fa fa-home"></i>
                             </a>
