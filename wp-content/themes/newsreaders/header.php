@@ -22,9 +22,9 @@
     </head>
 
     <body <?php body_class('nr-multicolor-category'); ?>>
-        <div id="preloader" class="preloader">
-            <div id="loader" class="loader"></div>
-        </div>
+<!--        <div id="preloader" class="preloader">-->
+<!--            <div id="loader" class="loader"></div>-->
+<!--        </div>-->
 
         <?php
         if( function_exists('wp_body_open') ){

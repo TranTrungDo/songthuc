@@ -674,30 +674,36 @@ if( !function_exists('newsreaders_content_offcanvas') ):
                     </div>
                 </div>
                 <div id="primary-nav-offcanvas" class="offcanvas-item offcanvas-main-navigation">
-                    <div class="menu">
-                        <ul>
-                            <li class="page_item">
-                                <a href="<?php echo esc_url(home_url('/')); ?>">
-                                    <i class="fa fa-home"></i>
-                                </a>
-                            </li>
-                            <?php
-                            if (has_nav_menu('primary')) :
-                                wp_nav_menu(array(
-                                    'theme_location' => 'na-primary-menu',
-                                    'container_class' => 'offcanvas-navigation-area',
-                                    'menu_class' => 'clearfix',
-                                    'items_wrap' => '%3$s',
-                                    'container' => 'div',
-                                    'fallback_cb' => 'wp_page_menu',
-                                    'show_toggles' => true,
-                                ));
-                            else:
-                                wp_list_pages(array('depth' => 0, 'title_li' => ''));
-                            endif; // has_nav_menu
-                            ?>
-                        </ul>
-                    </div>
+                    <?php wp_nav_menu(array(
+                        'theme_location' => 'na-primary-menu',
+                        'container' => 'div',
+                        'container_class' => 'offcanvas-navigation-area',
+                        'show_toggles' => true,
+                    )); ?>
+<!--                    <div class="menu">-->
+<!--                        <ul>-->
+<!--                            <li class="page_item">-->
+<!--                                <a href="--><?php //echo esc_url(home_url('/')); ?><!--">-->
+<!--                                    <i class="fa fa-home"></i>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            --><?php
+//                            if (has_nav_menu('primary')) :
+//                                wp_nav_menu(array(
+//                                    'theme_location' => 'na-primary-menu',
+//                                    'container_class' => 'offcanvas-navigation-area',
+//                                    'menu_class' => 'clearfix',
+//                                    'items_wrap' => '%3$s',
+//                                    'container' => 'div',
+//                                    'fallback_cb' => 'wp_page_menu',
+//                                    'show_toggles' => true,
+//                                ));
+//                            else:
+//                                wp_list_pages(array('depth' => 0, 'title_li' => ''));
+//                            endif; // has_nav_menu
+//                            ?>
+<!--                        </ul>-->
+<!--                    </div>-->
                 </div>
                 <?php if (has_nav_menu('na-social-menu')) { ?>
                     <div id="social-nav-offcanvas" class="offcanvas-item offcanvas-social-navigation">

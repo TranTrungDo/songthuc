@@ -120,29 +120,37 @@ $newsreaders_default = newsreaders_get_default_theme_options();
     <div id="navigation" class="nr-navigation-section header-navigation-wrapper <?php if( $ed_header_responsive_menu ) { echo 'na-responsive-menu'; } ?>">
         <div class="wrapper">
             <nav id="site-navigation" class="main-navigation">
-                <div class="menu">
-                    <ul>
-                        <li class="page_item">
-                            <a href="<?php echo esc_url(home_url('/')); ?>">
-                                <i class="fa fa-home"></i>
-                            </a>
-                        </li>
-                        <?php
-                        if (has_nav_menu('primary')) :
-                            wp_nav_menu(array(
-                                'theme_location' => 'na-primary-menu',
-                                'container_class' => 'navigation-area',
-                                'menu_class' => 'clearfix',
-                                'items_wrap' => '%3$s',
-                                'container' => false,
-                                'fallback_cb' => 'wp_page_menu',
-                            ));
-                        else:
-                            wp_list_pages(array('depth' => 0, 'title_li' => ''));
-                        endif; // has_nav_menu
-                        ?>
-                    </ul>
-                </div>
+                <?php
+                if( !$ed_header_responsive_menu ){
+                    wp_nav_menu(array(
+                        'theme_location' => 'na-primary-menu',
+                        'container' => 'div',
+                        'container_class' => 'navigation-area'
+                    ));
+                } ?>
+<!--                <div class="menu">-->
+<!--                    <ul>-->
+<!--                        <li class="page_item">-->
+<!--                            <a href="--><?php //echo esc_url(home_url('/')); ?><!--">-->
+<!--                                <i class="fa fa-home"></i>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        --><?php
+//                        if (has_nav_menu('primary')) :
+//                            wp_nav_menu(array(
+//                                'theme_location' => 'na-primary-menu',
+//                                'container_class' => 'navigation-area',
+//                                'menu_class' => 'clearfix',
+//                                'items_wrap' => '%3$s',
+//                                'container' => false,
+//                                'fallback_cb' => 'wp_page_menu',
+//                            ));
+//                        else:
+//                            wp_list_pages(array('depth' => 0, 'title_li' => ''));
+//                        endif;
+//                        ?>
+<!--                    </ul>-->
+<!--                </div>-->
             </nav><!-- #site-navigation -->
         </div>
         <div class="nr-progress-bar" id="progressbar">

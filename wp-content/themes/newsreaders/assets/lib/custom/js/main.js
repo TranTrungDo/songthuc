@@ -157,8 +157,8 @@
     });
   }
   e(window).on('load', function () { 
-    e('#loader').fadeOut(); 
-    e('#preloader').delay(350).fadeOut('slow');  
+    // e('#loader').fadeOut();
+    // e('#preloader').delay(350).fadeOut('slow');
     e('body').delay(350).css({ 'overflow': 'visible' });
   });
    e(document).ready(function () {
