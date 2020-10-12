@@ -43,14 +43,14 @@ if(  $newsreaders_archive_layout == 'default' || $newsreaders_archive_layout == 
 	
 	<div class="post-content">
 
-		<?php 
-		if( $newsreaders_archive_layout == 'grid' || $newsreaders_archive_layout == 'masonry' ){ ?>
-
-	        <div class="nr-category-- nr-category-with-bg--">
-			    <?php newsreaders_entry_footer( $cats = true, $tags = false, $edits = false ,$text = false,$icon = false); ?>
-	        </div>
-
-	    <?php } ?>
+<!--		--><?php //
+//		if( $newsreaders_archive_layout == 'grid' || $newsreaders_archive_layout == 'masonry' ){ ?>
+<!---->
+<!--	        <div class="nr-category-- nr-category-with-bg--">-->
+<!--			    --><?php //newsreaders_entry_footer( $cats = true, $tags = false, $edits = false ,$text = false,$icon = false); ?>
+<!--	        </div>-->
+<!---->
+<!--	    --><?php //} ?>
 
 		<header class="entry-header">
 
